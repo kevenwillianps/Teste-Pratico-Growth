@@ -8,7 +8,7 @@ Antes de iniciar a instalação, certifique-se de que seu ambiente atende aos se
 
 - **PHP 8.1+**
 - **Composer** (https://getcomposer.org/)
-- **MySQL 8.0+ ou PostgreSQL**
+- **MySQL 8.0+**
 
 ## Instalação
 
@@ -37,7 +37,7 @@ php artisan key:generate
 ```
 
 ### 5. Criar o banco de dados e rodar migrations
-Certifique-se de que seu banco de dados está rodando e configurado corretamente no arquivo `.env`, então execute:
+Certifique-se de que seu banco de dados MySQL está rodando e configurado corretamente no arquivo `.env`, então execute:
 ```sh
 php artisan migrate
 ```
@@ -49,7 +49,7 @@ php artisan db:seed
 ```
 
 ### 7. Usuário e senha padrão
-Usuário e senha padrão
+Usuário e senha padrão:
 ```sh
 email: admin@growth.com.br
 senha: 123
