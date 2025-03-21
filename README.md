@@ -1,4 +1,4 @@
-# Projeto Laravel
+# Projeto Laravel + Filament + Livewire
 
 ## Descrição
 Este é um projeto desenvolvido com o framework Laravel, Filament e Livewire, que oferece um ambiente robusto para desenvolvimento de aplicações web. O sistema inclui funcionalidades como autenticação de usuários, gestão de dados via migrations e testes automatizados com PHPUnit.
@@ -9,8 +9,6 @@ Antes de iniciar a instalação, certifique-se de que seu ambiente atende aos se
 - **PHP 8.1+**
 - **Composer** (https://getcomposer.org/)
 - **MySQL 8.0+ ou PostgreSQL**
-- **Node.js e NPM/Yarn** (se o projeto utilizar frontend compilado com Vite)
-- **Extensões PHP necessárias**: OpenSSL, PDO, Mbstring, Tokenizer, XML, Ctype, JSON, BCMath
 
 ## Instalação
 
@@ -50,7 +48,7 @@ Este projeto inclui um seeder para criar um usuário padrão. Para executar:
 php artisan db:seed
 ```
 
-### 7. Popular o banco com seeders
+### 7. Usuário e senha padrão
 Usuário e senha padrão
 ```sh
 email: admin@growth.com.br
