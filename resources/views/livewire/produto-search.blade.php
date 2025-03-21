@@ -1,44 +1,53 @@
-<div class="bg-gray-900 text-dark p-6 rounded-lg">
+<div>
+    
     <div class="flex space-x-4 mb-4">
-        <input type="text" wire:model.debounce.500ms="search" 
-            placeholder="Pesquisar por nome..." 
-            class="bg-gray-800 text-dark border border-gray-700 rounded px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none">
 
-        <select wire:model="status" 
-            class="bg-gray-800 text-dark border border-gray-700 rounded px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none">
-            <option value="">Todos</option>
-            <option value="ativo">Ativo</option>
-            <option value="inativo">Inativo</option>
-        </select>
+        <input type="text" class="w-full px-4 py-2 border rounded-lg bg-white text-gray-900 border-gray-300 
+               focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 
+               dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:focus:ring-blue-400 dark:focus:border-blue-400" wire:model.live.debounce.500ms="search" placeholder="Pesquisar produto..." />
+        
     </div>
 
-    <table class="w-full border-collapse border border-gray-700">
+    <table class="w-full border-collapse border">
+
         <thead>
-            <tr class="bg-gray-800">
-                <th class="border border-gray-700 p-2">Nome</th>
-                <th class="border border-gray-700 p-2">Descrição</th>
-                <th class="border border-gray-700 p-2">Preço</th>
-                <th class="border border-gray-700 p-2">Status</th>
+
+            <tr class="bg-dark-200">
+
+                <th class="border p-2">Nome</th>
+                <th class="border p-2">Descrição</th>
+                <th class="border p-2">Preço</th>
+                <th class="border p-2">Status</th>
+
             </tr>
+
         </thead>
+
         <tbody>
+
+            {{-- Percorre todos os registros localizados --}}
             @foreach($produtos as $produto)
-                <tr class="bg-gray-800 hover:bg-gray-700">
-                    <td class="border border-gray-700 p-2">{{ $produto->nome }}</td>
-                    <td class="border border-gray-700 p-2">{{ $produto->descricao }}</td>
-                    <td class="border border-gray-700 p-2">R$ {{ number_format($produto->preco, 2, ',', '.') }}</td>
-                    <td class="border border-gray-700 p-2">
-                        <span class="px-2 py-1 rounded 
-                            {{ $produto->status === 'ativo' ? 'bg-green-500 text-black' : 'bg-red-500 text-black' }}">
-                            {{ $produto->status }}
-                        </span>
-                    </td>
+
+                <tr>
+
+                    <td class="border p-2">{{ $produto->nome }}</td>
+                    <td class="border p-2">{{ $produto->descricao }}</td>
+                    <td class="border p-2">R$ {{ number_format($produto->preco, 2, ',', '.') }}</td>
+                    <td class="border p-2">{{ $produto->status }}</td>
+
                 </tr>
+
             @endforeach
+
         </tbody>
+
     </table>
 
     <div class="mt-4">
+
+        {{-- Cria a paginação --}}
         {{ $produtos->links() }}
+
     </div>
+
 </div>

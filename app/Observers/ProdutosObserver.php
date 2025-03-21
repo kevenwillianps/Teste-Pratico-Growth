@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Log;
 class ProdutosObserver
 {
     /**
-     * Handle the Produtos "created" event.
+     * Cria uma ação quando o produto for criado
      */
     public function created(Produtos $produtos): void
     {
@@ -16,7 +16,7 @@ class ProdutosObserver
     }
 
     /**
-     * Handle the Produtos "updated" event.
+     * Cria uma ação quando o produto for atualizado
      */
     public function updated(Produtos $produtos): void
     {
@@ -24,7 +24,7 @@ class ProdutosObserver
     }
 
     /**
-     * Handle the Produtos "deleted" event.
+     * Cria uma ação quando o produto for removido
      */
     public function deleted(Produtos $produtos): void
     {
@@ -32,7 +32,7 @@ class ProdutosObserver
     }
 
     /**
-     * Handle the Produtos "restored" event.
+     * Cria uma ação quando o produto for restaurado
      */
     public function restored(Produtos $produtos): void
     {
@@ -40,7 +40,7 @@ class ProdutosObserver
     }
 
     /**
-     * Handle the Produtos "force deleted" event.
+     * Cria uma ação quando o produto for removido
      */
     public function forceDeleted(Produtos $produtos): void
     {

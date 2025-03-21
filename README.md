@@ -22,10 +22,9 @@ git clone https://github.com/kevenwillianps/Teste-Pratico-Growth
 cd Teste-Pratico-Growth
 ```
 
-### 2. Instalar dependências do PHP e Node.js (se necessário)
+### 2. Instalar dependências do PHP
 ```sh
 composer install
-npm install # Ou yarn install se usar Yarn
 ```
 
 ### 3. Configurar variáveis de ambiente
@@ -51,7 +50,14 @@ Este projeto inclui um seeder para criar um usuário padrão. Para executar:
 php artisan db:seed
 ```
 
-### 7. Rodar servidor de desenvolvimento
+### 7. Popular o banco com seeders
+Usuário e senha padrão
+```sh
+email: admin@growth.com.br
+senha: 123
+```
+
+### 8. Rodar servidor de desenvolvimento
 ```sh
 php artisan serve
 ```
